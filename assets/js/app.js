@@ -26,12 +26,30 @@
           "bg-[radial-gradient(circle_at_0%_0%,#ff9cf0,#a259ff)] text-white shadow-[0_12px_30px_rgba(148,163,184,0.6)] dark:shadow-none";
 
         tabs.forEach((tab) => {
-          tab.className = `tab-btn px-[1.1rem] py-[0.55rem] rounded-full text-[0.82rem] font-medium tracking-[0.08em] uppercase transition-all duration-200 ease-in-out ${inactiveClass}`;
+          tab.className = `tab-btn px-3.5 sm:px-4 py-3
+           rounded-full
+           text-[11px] sm:text-[12px]
+           leading-none whitespace-nowrap
+           font-semibold tracking-widest uppercase
+           transition-all duration-200
+           bg-emerald-100 dark:bg-emerald-900/40
+           text-emerald-700 dark:text-emerald-300
+           hover:bg-emerald-200 dark:hover:bg-emerald-800
+           focus:outline-none${inactiveClass}`;
           tab.setAttribute("aria-selected", "false");
         });
 
         const activeTab = document.getElementById(`tab-${tabName}`);
-        activeTab.className = `tab-btn px-[1.1rem] py-[0.55rem] rounded-full text-[0.82rem] font-medium tracking-[0.08em] uppercase transition-all duration-200 ease-in-out ${activeClass}`;
+        activeTab.className = `tab-btn px-3.5 sm:px-4 py-3
+           rounded-full
+           text-[11px] sm:text-[12px]
+           leading-none whitespace-nowrap
+           font-semibold tracking-widest uppercase
+           transition-all duration-200
+           bg-emerald-100 dark:bg-emerald-900/40
+           text-emerald-700 dark:text-emerald-300
+           hover:bg-emerald-200 dark:hover:bg-emerald-800
+           focus:outline-none${activeClass}`;
         activeTab.setAttribute("aria-selected", "true");
 
         document.querySelectorAll(".program-panel").forEach((panel) => {
