@@ -1,25 +1,18 @@
-        // Select elements
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const icon = menuBtn.querySelector('i');
+  const menuBtn = document.getElementById("menu-toggle");
+  const menuIcon = document.getElementById("menu-icon");
+  const mobileMenu = document.getElementById("mobile-menu");
 
-        // Toggle Function
-        menuBtn.addEventListener('click', () => {
-            // 1. Toggle hidden class
-            mobileMenu.classList.toggle('hidden');
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+    menuIcon.classList.toggle("fa-bars");
+    menuIcon.classList.toggle("fa-xmark");
+  });
 
-            // 2. Change Icon (Bars <-> Xmark)
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            }
-        });
-
-        // Theme Toggle (Optional, included for completeness)
-        const themeBtn = document.getElementById('theme-toggle');
-        themeBtn.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-        });
+  // Close on outside click
+  document.addEventListener("click", (e) => {
+    if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.add("hidden");
+      menuIcon.classList.add("fa-bars");
+      menuIcon.classList.remove("fa-xmark");
+    }
+  });
