@@ -1,181 +1,174 @@
-      :root {
-        --bg: #ffffff;
-        --surface: #f8fafc;
-        --text-main: #0f172a;
-        --text-muted: #64748b;
-        --border: #e2e8f0;
-        --primary: #7b5cff;
-        --secondary: #60a5ff;
-        --accent: #ff54d0;
-      }
-      .dark {
-        --bg: #0b0716;
-        --surface: #1a1625;
-        --text-main: #f8fafc;
-        --text-muted: #94a3b8;
-        --border: #2d2a3b;
-        --primary: #8b6fff;
-      }
-      body {
-        background-color: var(--bg);
-        color: var(--text-main);
-        /* Note: Body transition can sometimes cause lag on first load, 
-           but since we handle class in head, it should be fine. 
-           For perfect zero-flash, you might remove background-color transition. */
-        transition:
-          background-color 0.3s,
-          color 0.3s;
-      }
-      .glass {
-        background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid var(--border);
-      }
-      .dark .glass {
-        background: rgba(11, 7, 22, 0.85);
-      }
-      .text-gradient {
-        background: linear-gradient(
-          135deg,
-          var(--primary),
-          var(--secondary),
-          var(--accent)
-        );
-        -webkit-background-clip: text;
-        color: transparent;
-      }
-      @keyframes gpGradShift {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-      .animate-gradient-text {
-        background-size: 300% 300%;
-        animation: gpGradShift 6s ease infinite;
-      }
+/* Grads Paths — Global Design. Clean, premium, minimal. StudentGuided-inspired. No italics. */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 
-      @keyframes gpStop1 {
-        0%,
-        100% {
-          stop-color: #ec4899;
-        }
-        50% {
-          stop-color: #3b82f6;
-        }
-      }
-      @keyframes gpStop2 {
-        0%,
-        100% {
-          stop-color: #3b82f6;
-        }
-        50% {
-          stop-color: #8b5cf6;
-        }
-      }
-      @keyframes gpStop3 {
-        0%,
-        100% {
-          stop-color: #8b5cf6;
-        }
-        50% {
-          stop-color: #ec4899;
-        }
-      }
-      .gp-stop-1 {
-        animation: gpStop1 6s ease infinite;
-      }
-      .gp-stop-2 {
-        animation: gpStop2 6s ease infinite;
-      }
-      .gp-stop-3 {
-        animation: gpStop3 6s ease infinite;
-      }
+:root {
+  --bg: #f8f6fb;
+  --surface: #f1eff5;
+  --text-main: #1a1919;
+  --text-muted: #52525b;
+  --border: #e4e4e7;
+  --primary: #7b5cff;
+  --secondary: #60a5ff;
+  --accent: #a78bfa;
+  --white-soft: #f8f6fb;
+}
+.dark {
+  --bg: #100b16;
+  --surface: #1a1424;
+  --text-main: #f2f1f0;
+  --text-muted: #a1a1aa;
+  --border: #2e2640;
+  --primary: #8b6fff;
+  --secondary: #7c3aed;
+  --accent: #a78bfa;
+}
 
-      @keyframes outline-move {
-        from {
-          background-position: 0% 50%;
-        }
-        to {
-          background-position: 300% 50%;
-        }
-      }
-      .animate-outline-move {
-        background-size:
-          100% 100%,
-          400% 100%;
-        animation: outline-move 7.5s linear infinite;
-      }
-      /* Scroll Animation CSS */
-      @keyframes scroll {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-50%);
-        }
-      }
-      .animate-scroll {
-        animation: scroll 40s linear infinite;
-      }
-      .hover-pause:hover .animate-scroll {
-        animation-play-state: paused;
-      }
-      @keyframes gradient {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-      .animate-gradient {
-        animation: gradient 3s ease infinite;
-      }
-      @keyframes scroll {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-50%);
-        }
-      }
-      .animate-scroll {
-        animation: scroll 40s linear infinite;
-      }
-      .hover-pause:hover .animate-scroll {
-        animation-play-state: paused;
-      }
-      @keyframes gradient {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-      .animate-gradient {
-        animation: gradient 6s ease infinite;
-      }
-      /* Optional: Hide scrollbar for Chrome, Safari and Opera but keep functionality */
-      .custom-scrollbar::-webkit-scrollbar {
-        width: 6px;
-      }
-      .custom-scrollbar::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      .custom-scrollbar::-webkit-scrollbar-thumb {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-      }
+* {
+  font-style: normal;
+}
+body {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-weight: 500;
+  background-color: var(--bg);
+  color: var(--text-main);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+body .font-display,
+body .font-serif {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.glass {
+  background: rgba(245, 244, 243, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.dark .glass {
+  background: rgba(14, 12, 20, 0.92);
+  border-bottom-color: var(--border);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+}
+
+/* Section alternation for visual separation */
+.section-alt {
+  background-color: var(--surface);
+}
+.dark .section-alt {
+  background-color: #13101a;
+}
+
+/* Page 3 How it Works: lavender tint so sections are clearly different */
+.section-lavender {
+  background-color: #f5f3ff;
+}
+.dark .section-lavender {
+  background-color: #1e1b4b;
+}
+
+@keyframes gpGradShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.animate-gradient-text {
+  background-size: 200% 200%;
+  animation: gpGradShift 6s ease infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-scroll {
+  animation: scroll 10s linear infinite;
+}
+.hover-pause:hover .animate-scroll {
+  animation-play-state: paused;
+}
+
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.animate-gradient {
+  animation: gradient 6s ease infinite;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+.dark .modal-backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Login / Signup modal panel: background synced with site theme (light or dark), identical look */
+.login-modal-panel,
+.signup-modal-panel {
+  background-color: var(--surface);
+  border-color: var(--border);
+}
+.signup-modal-content {
+  background: transparent;
+}
+.login-close-btn {
+  color: var(--text-muted);
+}
+.login-close-btn:hover {
+  color: var(--text-main);
+  background-color: var(--border);
+}
+
+/* Password toggle */
+.password-toggle {
+  cursor: pointer;
+  user-select: none;
+}

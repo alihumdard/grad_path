@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Why Us - Grads Paths</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    if (localStorage.getItem("theme") === "light") document.documentElement.classList.remove("dark");
+    else document.documentElement.classList.add("dark");
+  </script>
+  <script>
+    tailwind.config = { darkMode: "class", theme: { extend: { fontFamily: { sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"] } } } };
+  </script>
+</head>
+
+<body class="antialiased bg-[var(--bg)] text-[var(--text-main)]">
+  <header class="fixed inset-x-0 top-0 z-50 glass h-16 flex items-center">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between relative h-full">
+      <a href="index.html" class="flex items-center gap-2 shrink-0 z-10"><i
+          class="fa-solid fa-graduation-cap text-black dark:text-white text-2xl"></i><span
+          class="font-bold text-base text-black dark:text-white">Grads Paths</span></a>
+      <nav
+        class="hidden md:flex items-center gap-8 font-bold text-sm absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+        aria-label="Primary">
+        <a href="index.html" class="text-black dark:text-white hover:text-[var(--primary)] whitespace-nowrap">Home</a>
+        <a href="find-mentors.html"
+          class="text-black dark:text-white hover:text-[var(--primary)] whitespace-nowrap">Find Mentors</a>
+        <a href="how-it-works.html" class="text-black dark:text-white hover:text-[var(--primary)] whitespace-nowrap">How
+          it Works</a>
+        <a href="why-us.html" class="text-[var(--primary)] whitespace-nowrap">Why Us</a>
+
+      </nav>
+      <div class="flex items-center gap-3 shrink-0 z-10">
+        <button id="theme-toggle"
+          class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center"
+          aria-label="Toggle theme"></button>
+        <a href="index.html#get-in-touch"
+          class="hidden sm:inline-flex px-4 py-2 rounded-full text-sm font-bold text-white bg-gradient-to-r from-violet-600 to-indigo-600">Login</a>
+        <a href="index.html#get-in-touch"
+          class="hidden sm:inline-flex px-4 py-2 rounded-full text-sm font-bold border-2 border-slate-300 dark:border-slate-600">Signup</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-24 pb-20 px-4 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold text-black dark:text-white mb-2">Why Us</h1>
+    <p class="text-slate-600 dark:text-slate-400 mb-14 max-w-2xl">We focus on US institutions only. Real mentors from
+      real programs. Here’s how we compare and why we care.</p>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-black dark:text-white mb-6">How we compare to other tutoring services</h2>
+      <p class="text-slate-600 dark:text-slate-400 mb-6">In the graduate and tutoring space, many options are generic or
+        lack real insider access. We built Grads Paths to fix that.</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
+          <thead>
+            <tr class="bg-slate-100 dark:bg-white/5">
+              <th class="px-4 py-3 font-bold text-black dark:text-white">What</th>
+              <th class="px-4 py-3 font-bold text-black dark:text-white">Typical tutoring / prep</th>
+              <th class="px-4 py-3 font-bold text-[var(--primary)]">Grads Paths</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr class="border-t border-slate-200 dark:border-slate-700">
+              <td class="px-4 py-3 font-medium text-black dark:text-white">Who teaches you</td>
+              <td class="px-4 py-3 text-slate-600 dark:text-slate-400">Generic tutors or pre-recorded content</td>
+              <td class="px-4 py-3 text-slate-700 dark:text-slate-300">Verified students & alumni from top US programs
+              </td>
+            </tr>
+            <tr class="border-t border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-white/[0.02]">
+              <td class="px-4 py-3 font-medium text-black dark:text-white">Program insight</td>
+              <td class="px-4 py-3 text-slate-600 dark:text-slate-400">Rare or extra cost</td>
+              <td class="px-4 py-3 text-slate-700 dark:text-slate-300">Core offering: hear what programs are really like
+              </td>
+            </tr>
+            <tr class="border-t border-slate-200 dark:border-slate-700">
+              <td class="px-4 py-3 font-medium text-black dark:text-white">Pricing</td>
+              <td class="px-4 py-3 text-slate-600 dark:text-slate-400">Often opaque or subscription-heavy</td>
+              <td class="px-4 py-3 text-slate-700 dark:text-slate-300">Transparent per-session pricing, free 15-min
+                intro</td>
+            </tr>
+            <tr class="border-t border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-white/[0.02]">
+              <td class="px-4 py-3 font-medium text-black dark:text-white">Scope</td>
+              <td class="px-4 py-3 text-slate-600 dark:text-slate-400">Broad or test-only</td>
+              <td class="px-4 py-3 text-slate-700 dark:text-slate-300">Graduate & professional (MBA, Law, GRE, GMAT,
+                etc.)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-black dark:text-white mb-4">Speak About the Program</h2>
+      <p class="text-slate-600 dark:text-slate-400 mb-4">One of our core services is letting you hear what a program is
+        actually like from the student’s view. Not marketing copy—real experience: culture, workload, what helped them
+        get in, and what they wish they’d known.</p>
+      <p class="text-slate-600 dark:text-slate-400">That’s Program Insights and mentor sessions. You get to “speak about
+        the program” with someone who’s in it or just finished it.</p>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-black dark:text-white mb-4">We care about our users</h2>
+      <p class="text-slate-600 dark:text-slate-400 mb-6">We’re not a faceless platform. We verify mentors, keep pricing
+        clear, and focus on US graduate and professional paths so you get relevant guidance. We want you to make
+        informed decisions and feel supported—not sold to.</p>
+      <ul class="space-y-3 text-slate-700 dark:text-slate-300">
+        <li class="flex items-start gap-3">
+          <i class="fa-solid fa-check text-[var(--primary)] mt-0.5"></i>
+          <span>Verified students and alumni from real US programs</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <i class="fa-solid fa-check text-[var(--primary)] mt-0.5"></i>
+          <span>Free 15-minute consultation so you can try before you commit</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <i class="fa-solid fa-check text-[var(--primary)] mt-0.5"></i>
+          <span>Transparent pricing with no hidden fees</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <i class="fa-solid fa-check text-[var(--primary)] mt-0.5"></i>
+          <span>Support when you need it—sign in to submit a ticket</span>
+        </li>
+      </ul>
+    </section>
+
+    <p class="mt-8"><a href="index.html" class="font-semibold text-[var(--primary)] hover:underline">Back to Home</a>
+    </p>
+  </main>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
