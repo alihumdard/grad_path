@@ -26,14 +26,22 @@
 * {
   font-style: normal;
 }
+html {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
 body {
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
   font-weight: 500;
   background-color: var(--bg);
   color: var(--text-main);
-  transition:
-    background-color 0.3s,
-    color 0.3s;
+  overflow-x: hidden;
+  transition: background-color 0.3s, color 0.3s;
+}
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }
 body .font-display,
 body .font-serif {
@@ -125,6 +133,15 @@ h6 {
 }
 .animate-gradient {
   animation: gradient 6s ease infinite;
+}
+
+/* Hide scrollbar for logo belt / horizontal scroll areas on touch */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
