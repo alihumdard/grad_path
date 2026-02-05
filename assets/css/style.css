@@ -3,7 +3,7 @@
 
 :root {
   --bg: #ffff;
-  --surface: #f1eff5;
+  --surface: #f5f7faea;
   --text-main: #1a1919;
   --text-muted: #52525b;
   --border: #e4e4e7;
@@ -16,7 +16,7 @@
   --bg: #100b16;
   --surface: #1a1424;
   --text-main: #f2f1f0;
-  --text-muted: #a1a1aa;
+  --text-muted: #ffff;
   --border: #2e2640;
   --primary: #6294b2;
   --secondary: #7c3aed;
@@ -191,4 +191,44 @@ h6 {
 .password-toggle {
   cursor: pointer;
   user-select: none;
+}
+
+/* 1. Custom Thin Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.5);
+}
+
+/* 2. Hide Scrollbar for Logo Belt */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 3. Animation for Logo Belt */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-scroll {
+  animation: scroll 8s linear infinite;
+}
+.hover-pause:hover .animate-scroll {
+  animation-play-state: paused;
 }
